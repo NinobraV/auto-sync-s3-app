@@ -1,0 +1,57 @@
+// If you want to get more details about TSConfig References, please access this link: https://www.typescriptlang.org/tsconfig; 
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "commonjs",
+    "target": "es6",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "rootDirs": [
+      "src",
+      "dist"
+    ],
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "*": ["node_modules/*", "src/types/*"],
+      "src/*": [
+        "src/*"
+      ],
+      "@usecases/*": [
+        "src/usecases/*"
+      ],
+      "@errors/*": [
+        "src/errors/*"
+      ],
+      "@gateways/*": [
+        "src/domain/gateways/*"
+      ],
+      "@models/*": [
+        "src/domain/models/*"
+      ],
+      "@repositories/*": [
+        "src/domain/repositories/*"
+      ],
+      "@injection/*": ["src/injection/*"],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@views/*": [
+        "src/views/*"
+      ],
+      "@common/*": [
+        "src/common/*"
+      ]
+    },
+
+  },
+  "include": [
+    "src/*.ts",
+    "src/**/*.ts",
+  ],
+  "exclude": ["node_modules", "dist"],
+}
